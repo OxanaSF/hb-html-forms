@@ -6,27 +6,107 @@
 <body>
     <h1>Order!</h1>
 
-    <h3>Prices</h3>
-    <table>
-        <tr>
-            <td><b>Melon Name</b></td><td><b>Price per lb.</b></td>
-        </tr>
-        <tr>
-            <td>Watermelon</td><td>$1.59</td>
-        </tr>
-        <tr>
-            <td>Honeydew</td><td>$0.99</td>
-        </tr>
-         <tr>
-            <td>Canteloupe</td><td>$1.29</td>
-        </tr>
-        <tr>
-            <td>Crenshaw</td><td>$2.19</td>
-        </tr>
-        <tr>
-            <td>Canary</td><td>$11.99</td>
-        </tr>
-    </table>
+    <section>
+        <h3>Prices</h3>
+        <table>
+            <thead>
+                <tr>
+                    <td>Melon Name</td>
+                    <td>Price per lb.</td>
+                </tr>
+            </thead>
+            <tr>
+                <td>Watermelon</td>
+                <td>$1.59</td>
+            </tr>
+            <tr>
+                <td>Honeydew</td>
+                <td>$0.99</td>
+            </tr>
+             <tr>
+                <td>Canteloupe</td>
+                <td>$1.29</td>
+            </tr>
+            <tr>
+                <td>Crenshaw</td>
+                <td>$2.19</td>
+            </tr>
+            <tr>
+                <td>Canary</td>
+                <td>$11.99</td>
+            </tr>
+        </table>
+    </section>
 
+    <section>
+        <p>Place your orders here! You know you want to.</p>
+        <form
+            action="https://ubermelon-order-form.herokuapp.com/process"
+            method="GET"
+        >
+            <section class="form-input-group">
+                <label for="firstname">First Name:</label>
+                <input id="firstname" type="text" name="firstname">
+            </section>
+
+            <section class="form-input-group">
+                <label for="lastname">Last Name:</label>
+                <input id="lastname" type="text" name="lastname">
+            </section>
+
+            <section class="form-input-group">
+                <label for="melontype">Melon Type:</label>
+                <select id="melontype" name="melontype">
+                    <option value="watermelon">Watermelon</option>
+                    <option value="honeydew">Honeydew</option>
+                    <option value="canteloupe">Canteloupe</option>
+                    <option value="crenshaw">Crenshaw</option>
+                    <option value="canary">Canary</option>
+                </select>
+            </section>
+
+            <section class="form-input-group">
+                <label for="quantity">Quantity:</label>
+                <input id="quantity" type="text" name="quantity">
+            </section>
+
+            <section class="form-input-group">
+                <label for="time">Delivery Time:</label>
+                <input id="time" type="radio" name="time" value="am">
+                    12:00am-12:00pm
+                <input id="time" type="radio" name="time" value="pm">
+                    12:00pm-12:00am
+                <input id="time type="radio" name="time" value="wat">
+                    Time is an illusion
+            </section>
+
+            <section class="form-input-group">
+                <label for="returning">Returning Customer:</label>
+                <input id="returning" type="radio" name="returning" value="yes">
+                    Yes
+                <input id="returning" type="radio" name="returning" value="no">
+                    No
+            </section>
+
+            <section class="form-input-group">
+                <label for="stats">For statistical purposes:</label>
+                <input id="stats" type="checkbox" name="stats" value="dog">
+                    Dog
+                <input id="stats" type="checkbox" name="stats" value="cat">
+                    Cat
+                <input id="stats" type="checkbox" name="stats" value="hedgehog">
+                    Hedgehog
+                <input id="stats" type="checkbox" name="stats" value="balloonicorn">
+                    Balloonicorn
+                <input id="stats" type="checkbox" name="stats" value="yak">
+                    Yak
+            </section>
+
+            <section class="form-input-group">
+                <input type="submit">
+            </section>
+            
+        </form>
+    </section>
 </body>
 </html>
